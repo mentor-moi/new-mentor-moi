@@ -15,6 +15,9 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <h1 className="text-3xl font-bold text-teal-600 underline">
+            and Tailwind CSS
+          </h1>
         </h1>
 
         <p className={styles.description}>
