@@ -17,7 +17,7 @@ describe('Home', () => {
     render(<Home />)
 
     const button = screen.getByRole('button', {
-      name: /submit/i,
+      name: /submit yes/i,
     })
 
     expect(button).toBeInTheDocument()
