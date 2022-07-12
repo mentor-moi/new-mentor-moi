@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           <a>About</a>
         </Link>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">aNext.js!</a>
           <span className="text-3xl font-bold text-teal-600 underline">
             and Tailwind CSS
           </span>
@@ -38,6 +38,7 @@ const Home: NextPage = () => {
           <a href="https://nextjs.org/learn" className={styles.card}>
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <button type="submit">Submit yes</button>
           </a>
 
           <a
