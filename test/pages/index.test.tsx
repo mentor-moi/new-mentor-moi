@@ -7,7 +7,7 @@ describe('Home', () => {
     render(<Home />)
 
     const heading = screen.getByRole('heading', {
-      name: /ddddddddd\.js!/i,
+      name: /welcome to anext\.js!/i,
     })
 
     expect(heading).toBeInTheDocument()
