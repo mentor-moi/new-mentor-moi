@@ -3,7 +3,7 @@ name: Tests CI
 on: [push, pull_request]
 
 jobs:
-  test:
+  jest-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,7 +14,7 @@ jobs:
       - run: yarn install
       - run: npm run workflow
 
-      - name: Tests ✅
+      - name: Jest Tests success ✅
         if: ${{ success() }}
         run: |
           curl --request POST \
@@ -28,7 +28,7 @@ jobs:
             "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           }'
 
-      - name: Tests 🚨
+      - name: Jest Tests fail 🚨
         if: ${{ failure() }}
         run: |
           curl --request POST \
