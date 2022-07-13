@@ -1,4 +1,5 @@
-name: Run All Tests
+
+name: Playwright Tests
 on:
   push:
   pull_request:
@@ -17,6 +18,11 @@ jobs:
       - name: Install Playwright
         run: npx playwright install --with-deps
       - name: Run Jest
-        run: npm run test
+        run: npm test
       - name: Run Playwright tests
         run: npm run test:e2e
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: playwright-test-results
+          path: test-results/
