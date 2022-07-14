@@ -18,14 +18,14 @@ function classNames(...classes: string[]) {
 
 const Navbar: NextPage = () => {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-white">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-black">
                   <span aria-label="Open menu" className="sr-only">
                     Open main menu
                   </span>
@@ -67,8 +67,8 @@ const Navbar: NextPage = () => {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            ? 'bg-lightOrange text-white'
+                            : 'hover:border-b-2 hover:border-b-lightOrange',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -91,14 +91,14 @@ const Navbar: NextPage = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
-                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                      <span className="sr-only">Open user menu</span>
+                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full ring-2 ring-darkOrange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-lightOrange focus:ring-white">
+                      <span className="sr-only ">Open user menu</span>
                       <Image
                         className="h-8 w-8 rounded-full"
                         src="https://images.unsplash.com/photo-1586628345267-d9db8d893f9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fG1lbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60"
                         alt=""
-                        height={32}
-                        width={32}
+                        height={42}
+                        width={42}
                       />
                     </Menu.Button>
                   </div>
@@ -111,11 +111,11 @@ const Navbar: NextPage = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-darkOrange ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/profil"
                             className={classNames(
                               active ? 'bg-gray-100' : '',
                               'block px-4 py-2 text-sm text-gray-700'

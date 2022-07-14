@@ -12,13 +12,17 @@
     "workflow": "jest --forceExit --detectOpenHandles",
     "prettier:check": "prettier --config .prettierrc --check \"src/**/*.{ts,css,html}\""
   },
-  "husky": {   
-    "hooks": {  
-       "pre-commit": "lint-staged",
-       "pre-push": "npm run test"            
-     }   
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
+    }
   },
-  "lint-staged": {"src/**/*.{ts,css,html}": ["npm run prettier:check"]},
+  "lint-staged": {
+    "src/**/*.{ts,css,html}": [
+      "npm run prettier:check"
+    ]
+  },
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
