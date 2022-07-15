@@ -91,14 +91,17 @@ const Navbar: NextPage = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
-                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full ring-2 ring-darkOrange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-lightOrange focus:ring-white">
-                      <span className="sr-only ">Open user menu</span>
+                    <Menu.Button className="bg-gray-800  flex text-sm rounded-full ring-2 ring-darkOrange focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-lightOrange focus:ring-white">
+                      <span className="sr-only object-cover ">
+                        Open user menu
+                      </span>
                       <Image
+                        object-cover
                         className="h-8 w-8 rounded-full"
                         src="https://images.unsplash.com/photo-1586628345267-d9db8d893f9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODB8fG1lbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60"
                         alt=""
-                        height={42}
-                        width={42}
+                        height={45}
+                        width={45}
                       />
                     </Menu.Button>
                   </div>
