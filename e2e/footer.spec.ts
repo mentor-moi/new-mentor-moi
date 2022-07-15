@@ -9,6 +9,5 @@ test('should navigate to the about page', async ({ page }) => {
  // await expect(page).toHaveURL('http://localhost:3000/')
 //   // The new page should contain an h1 with "About Page"
 //   await expect(page.locator('h1')).toContainText('Hello')
-  const locator = page.locator('text=2022 Mentor Moi, Inc. All rights reserved.');
-  await expect(locator).toBeVisible();
+  await expect(page.locator('text=Mentors').first()).toBeVisible()
 })
