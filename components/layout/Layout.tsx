@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Footer from '../elements/Footer/Footer'
 import Navbar from '../elements/Navbar/Navbar'
 
 type Props = {
@@ -10,6 +11,7 @@ export default function Layout({ children }: Props) {
     <>
       <Navbar />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }
