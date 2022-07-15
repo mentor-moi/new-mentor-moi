@@ -17,5 +17,5 @@ test('Test links', async ({ page }) => {
   // Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)
   await page.goto('https://new-mentor-moi.vercel.app/')
   await page.locator('text=Twitter').click();
-    expect(page.url()).toMatch("https://new-mentor-moi.vercel.app/")
+   await expect(page.url()).toMatch("https://new-mentor-moi.vercel.app/")
 })
