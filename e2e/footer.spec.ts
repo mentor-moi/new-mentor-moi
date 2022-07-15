@@ -13,9 +13,9 @@ test('should navigate to the about page', async ({ page }) => {
 })
 
 
-test('sho TEST e', async ({ page }) => {
+test('Test links', async ({ page }) => {
   // Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)
   await page.goto('https://new-mentor-moi.vercel.app/')
-  await page.click("a");
-    expect(page.url()).toMatch(/iana\.org/)
+  await page.locator('text=Twitter').click();
+    expect(page.url()).toMatch("https://new-mentor-moi.vercel.app/")
 })
