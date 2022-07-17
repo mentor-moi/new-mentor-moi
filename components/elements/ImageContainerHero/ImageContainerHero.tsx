@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const ImageContainerHero: NextPage = () => {
   return (
-    <div className="flex mt-2 items-center">
+    <div className="flex mt-6 items-center">
       <div className="absolute bottom-28 left-0 sm:left-56 select-none lg:flex hidden rounded-full mb-5   ">
         <Image
           className="select-none"
