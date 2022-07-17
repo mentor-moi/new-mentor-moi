@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import HeroHomepage from '../components/elements/HeroHomepage/HeroHomepage'
+import PresentationContainerHomepage from '../components/elements/PresentationContainerHomepage/PresentationContainerHomepage'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <header>
         <HeroHomepage />
       </header>
+      <PresentationContainerHomepage />
     </div>
   )
 }

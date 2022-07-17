@@ -89,10 +89,4 @@ describe('Footer', () => {
     render(<Footer />)
     expect(document.querySelectorAll('.link-socials').length).toBe(5)
   })
-
-  //   it('Label should open the menu', () => {
-  //     render(<Footer />)
-
-  //     userEvent.click(screen.getByLabelText('Open menu'))
-  //   })
 })

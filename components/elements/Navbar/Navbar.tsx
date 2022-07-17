@@ -91,10 +91,10 @@ const Navbar: NextPage = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
-                    <span className=" bg-darkOrange py-2 px-2 rounded">
+                    <span className=" border-b-lightOrange border-b-spacing-2 border-b-2">
                       Se connecter
                     </span>
-                    <Menu.Button className="bg-gray-800  flex text-sm rounded-full ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-lightOrange focus:ring-white">
+                    <Menu.Button className="bg-gray-800  flex text-sm rounded-full ring-2  focus:outline-none focus:ring-2 focus:ring-offset-2 ring-lightOrange focus:ring-offset-lightOrange focus:ring-white">
                       <span className="sr-only object-cover ">
                         Open user menu
                       </span>
