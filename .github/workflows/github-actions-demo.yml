@@ -53,18 +53,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           max_timeout: 300
-  test_e2e:
-    needs: test_setup
-    name: Playwright tests
-    timeout-minutes: 5
-    runs-on: ubuntu-latest
-    steps:
-      - name: Prepare testing env
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm ci
-      - run: npx playwright install --with-deps
-      - name: Run tests
-        run: npm run test:e2e
+ 
