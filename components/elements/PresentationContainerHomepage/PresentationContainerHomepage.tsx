@@ -14,8 +14,8 @@ const features = [
 
 const PresentationContainerHomepage: NextPage = () => {
   return (
-    <section className="presentationContainerHomepage  bg-lightOrange">
-      <div className="relative py-16 sm:py-2 ">
+    <section className="presentationContainerHomepage mt-12  bg-lightOrange">
+      <div className="relative  pb-16 sm:pb-2 ">
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
           <h2 className="mt-2 text-3xl font-extrabold  tracking-tight sm:text-4xl">
             À portée de main : un coach de carrière dédié.

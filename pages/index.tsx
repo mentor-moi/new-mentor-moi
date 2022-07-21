@@ -3,6 +3,9 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import HeroHomepage from '../components/elements/HeroHomepage/HeroHomepage'
 import PresentationContainerHomepage from '../components/elements/PresentationContainerHomepage/PresentationContainerHomepage'
+import MacSectionHome from '../components/elements/MacSectionHome/MacSectionHome'
+import Testimonial from '../components/elements/Testimonial/Testimonial'
+import FAQ from '../components/elements/FAQ/FAQ'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +20,9 @@ const Home: NextPage = () => {
         <HeroHomepage />
       </header>
       <PresentationContainerHomepage />
+      <MacSectionHome />
+      <Testimonial />
+      <FAQ />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import ImageContainerHero from '../ImageContainerHero/ImageContainerHero'
+import ImageContainerMobile from '../ImageContainerMobile/ImageContainerMoile'
 
 const HeroHomepage: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const HeroHomepage: NextPage = () => {
         </div>
       </div>
       <ImageContainerHero />
+      <ImageContainerMobile />
     </div>
   )
 }
