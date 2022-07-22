@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
@@ -7,7 +8,9 @@ import MacSectionHome from '../components/elements/MacSectionHome/MacSectionHome
 import Testimonial from '../components/elements/Testimonial/Testimonial'
 import FAQ from '../components/elements/FAQ/FAQ'
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ joke }: any) => {
+  console.log(joke)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -25,6 +28,31 @@ const Home: NextPage = () => {
       <FAQ />
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  console.log('getServerSideProps')
+
+  const url = 'https://mevn-mentor-moi.herokuapp.com/api/mentors'
+  const res = await fetch(url, {
+    headers: {
+      Accept: 'application/json',
+    },
+  })
+  const data = await res.json()
+  console.log(data)
+
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      joke: data,
+    },
+  }
 }
 
 export default Home

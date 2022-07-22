@@ -67,7 +67,7 @@ const Navbar: NextPage = () => {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? 'bg-lightPurple text-black'
+                            ? 'bg-lightOrange text-black'
                             : 'hover:border-b-2 hover:border-b-lightOrange',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
